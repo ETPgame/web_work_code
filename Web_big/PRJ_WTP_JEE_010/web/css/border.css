@@ -1,0 +1,21 @@
+/* 场景 PRJ-WTP-WEB-014：旅游产品段落属性 【1/2 start】 */
+
+/* 产品主边框 */
+.main_l .recommend {
+	border-width:1px;
+	border-style:solid;
+	border-color:#ccc;
+}
+
+/* 产品底部其余信息边框 */
+.discribe{
+    border-top: 1px solid #e3e3e3;
+}
+.discribe li{
+    border-right: 1px solid #e3e3e3;
+}
+.discribe li:last-child {
+    border-right: 1px solid #F5F5F5;
+}
+
+/* 场景 PRJ-WTP-WEB-014：旅游产品段落属性 【1/2 end】 */

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>QQ简易聊天框</title>
+    <link rel="stylesheet" href="css/chat.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+      $(document).ready(function(){
+        var headImg=new Array("head01.jpg","head02.jpg","head03.jpg");
+        var uName=new Array("时尚伊人","六月奇迹","松松");
+        $("#send").click(function(){
+          var num = parseInt(Math.random() * 3);
+          var content=$("textarea").val();
+          if(content.length > 0){
+            $('.chatBody').append(
+              `<div class="item">
+                            <img src="images/${headImg[num]}" alt="">
+                            <span>${uName[num]}</span>
+                            <div>${content}</div>
+                         </div>`
+            )
+          }
+          $("textarea").val("");
+        });
+      });
+    </script>
+</head>
+<body>
+<section id="chat">
+    <div class="chatBody"></div>
+    <div><img src="images/icon.jpg"></div>
+    <textarea class="chatText"></textarea>
+    <div class="btn"><span>关闭(C)</span><span id="send">发送(S)</span></div>
+</section>
+</body>
+</html>

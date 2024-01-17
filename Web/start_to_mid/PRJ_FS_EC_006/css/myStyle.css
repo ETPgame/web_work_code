@@ -1,0 +1,26 @@
+/*定义周推荐容器里面的价格，该价格起到初始化价格样式的作用
+    1、字体大小18像素
+    2、字体粗细700
+    3、字体颜色白色
+*/
+.price{
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/*定义周推荐容器里面打折之前的价格
+    1、字体颜色灰色
+    2、文本修饰为穿过文本的一条线
+*/
+.normal_price{
+  color: #999999;
+  text-decoration: line-through;
+}
+
+/*定义周推荐容器里面打折之后的价格
+    1、字体颜色为黄色
+*/
+.special_price{
+  color: #fced11;
+}

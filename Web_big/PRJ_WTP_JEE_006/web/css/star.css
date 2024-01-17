@@ -1,0 +1,46 @@
+
+
+/******* EXAMPLE F *******/
+
+.box-body{
+	height:30px;
+	margin-top: -28px;
+	margin-left: 32px;
+}
+
+.br-wrapper-f .br-widget {
+	height: 30px;
+
+}
+.br-wrapper-f .br-widget a {
+	background-image: url("../img/star_double.png");
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	float: left;
+}
+
+.br-wrapper-f .br-widget a:hover,
+.br-wrapper-f .br-widget a.br-active,
+.br-wrapper-f .br-widget a.br-selected {
+	background-position: 0 90px;
+}
+
+
+.br-wrapper-f .br-widget .br-current-rating {
+
+	width:  30px;
+	display: inline-block;
+	color: #666;
+	float:left;
+	margin-top: -22px;
+	margin-left: -20px;
+
+
+}
+
+/* Center in container */
+.br-wrapper-f {
+	width: 152px;
+	margin-left: 28px;
+}

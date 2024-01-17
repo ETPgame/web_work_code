@@ -1,0 +1,36 @@
+.menu table{
+  border: 1px solid green;
+  width: 486px;
+  height: 10px;
+}
+
+.menu table td{
+  position: relative;
+  float: left;
+  background-color: #66CBFF;
+  width: 80px;
+  height: 30px;
+  font-size: 13px;
+  text-align: center;
+  padding: 0 0 3px 0;
+}
+
+#sidebar .sidebar_box .content a{
+  cursor: move;
+}
+
+a:link{
+  color: blue;
+}
+
+a:visited{
+  color: #666666;
+}
+
+a:hover{
+  color: #00ff00;
+}
+
+a:active{
+  color: #ff0000;
+}

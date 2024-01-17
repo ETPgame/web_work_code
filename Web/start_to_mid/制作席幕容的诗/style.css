@@ -1,0 +1,45 @@
+/*网页整体样式*/
+body{
+  background: linear-gradient(#66CBFF, #ffffff) no-repeat;
+  width: 400px;
+  font-size: 12px;
+  color: #333333;
+  font-family: Verdana, sans-serif;
+  line-height: 30px;
+}
+
+/*段落样式*/
+p {
+  text-indent: 2em;
+  line-height: 22px;
+  font-size: 12px;
+}
+
+/*题目样式*/
+#cxy {
+  text-shadow: 2px 2px 4px #ef0303;
+  font-family: "微软雅黑", Arial, sans-serif;
+}
+
+#wen {
+  text-shadow: 2px 2px 4px #63ee0a;
+  font-family: "幼圆", sans-serif;
+}
+
+#mei {
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #ffffff;
+}
+
+#nice {
+  color: #0028ff;
+  font-size: 16px;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+#bro {
+  text-decoration: underline;
+  color: #63ee0a;
+}

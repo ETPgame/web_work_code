@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	
+	<welcome-file-list>
+		<welcome-file>index.jhtml</welcome-file>
+	</welcome-file-list>
+		
+	<servlet>
+		<servlet-name>indexAction</servlet-name>
+		<servlet-class>campsg.qunawan.action.IndexAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>indexAction</servlet-name>
+		<url-pattern>/index.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>tripDetailAction</servlet-name>
+		<servlet-class>campsg.qunawan.action.TripDetailAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tripDetailAction</servlet-name>
+		<url-pattern>/tripDetail.jhtml</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	
+	<welcome-file-list>
+		<welcome-file>personal_information.html</welcome-file>
+	</welcome-file-list>
+	
+	<!-- PRJ-WTP-JEE-006：上传用户头像 注册CropAction 【Start】 -->
+	<servlet>
+		<servlet-name>CropAction</servlet-name>
+		<servlet-class>campsg.qunawan.action.CropAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CropAction</servlet-name>
+		<url-pattern>/crop.jhtml</url-pattern>
+	</servlet-mapping>
+
+	<!-- PRJ-WTP-JEE-006：上传用户头像 注册CropAction 【End】 -->
+	
+</web-app>

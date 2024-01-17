@@ -1,0 +1,10 @@
+/*定义导航栏列表项的样式，具体如下：
+1、相对定位
+2、由于需要导航菜单的列表项横向排列，这里需要添加左浮动
+3、将列表项转为行内元素
+*/
+.menu ul li{
+  position: relative;
+  float: left;
+  display: inline;
+}

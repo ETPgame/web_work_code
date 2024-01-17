@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	
+	<welcome-file-list>
+		<welcome-file>index.jhtml</welcome-file>
+	</welcome-file-list>
+	
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:applicationContext.xml
+		</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>index_url</param-name>
+		<param-value>index.jhtml</param-value>
+	</context-param>
+	
+	<!-- Spring监听器，进行初始化 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<listener>    
+        <listener-class>    
+            campsg.qunawan.listener.OnLineListener 
+        </listener-class>    
+    </listener>  
+    
+    
+    <!-- 添加session监听器 -->
+    	<listener>    
+        <listener-class>    
+            campsg.qunawan.listener.SessionListener 
+        </listener-class>    
+    </listener> 
+    
+  <!-- 便于最短时间内观察实验效果，实验时，将session的有效时间设置为1分钟,实际情况可能会在1分钟至2分钟之间销毁 -->
+    <session-config>  
+   		 <session-timeout>10</session-timeout>  
+	</session-config>  
+	
+	
+	<filter>
+		<filter-name>SetCharacterEncoding</filter-name>
+		<!-- 设置对应过滤器的类 -->
+		<filter-class>campsg.qunawan.filter.SetCharacterEncodingFilter</filter-class>
+		<!-- 设置过滤器初始化时的参数 -->
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+	<!-- 设置过滤的url -->
+	<filter-mapping>
+		<filter-name>SetCharacterEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>userFilter</filter-name>
+		<filter-class>campsg.qunawan.filter.UserFilter</filter-class>
+		<!-- 设置初始化参数-可进入过滤器字段 -->
+		<init-param>
+			<param-name>pass</param-name>
+			<param-value>/;/login.html;/login.jhtml;/register.jhtml;/code.jhtml;/onLinePersonal.jhtml;/logout.jhtml;/ImagesAction.jhtml;/index.jhtml;/search.jhtml;/tripDetail.jhtml;/login.jsp;.*.json;.*.jpg;.*.css;.*.png;.*.gif;.*.js;.*footer.jsp;.*.map;/image_cache/*;/message.jsp</param-value>
+		</init-param>
+		<!-- 设置初始化参数-达到过滤未通过条件时跳转的url -->
+		<init-param>
+			<param-name>error_url</param-name>
+			<param-value>/login.jsp</param-value>
+		</init-param>
+		<!-- 初始化参数-设置当前登录状态的标识符 -->
+		<init-param>
+			<param-name>userConstants</param-name>
+			<param-value>user</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>userFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>loginAction</servlet-name>
+		<servlet-class>campsg.qunawan.proxy.DelegatingServletProxy</servlet-class>
+		<init-param>
+			<param-name>error_url</param-name>
+			<param-value>login.jsp?type=loginerror</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loginAction</servlet-name>
+		<url-pattern>/login.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>registerAction</servlet-name>
+		<servlet-class>campsg.qunawan.proxy.DelegatingServletProxy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>registerAction</servlet-name>
+		<url-pattern>/register.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>code</servlet-name>
+		<servlet-class>campsg.qunawan.action.CodeAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>code</servlet-name>
+		<url-pattern>/code.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>campsg.qunawan.action.LogoutAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/logout.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>personalInfoAction</servlet-name>
+		<servlet-class>campsg.qunawan.proxy.DelegatingServletProxy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>personalInfoAction</servlet-name>
+		<url-pattern>/personalinfo.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ordersAction</servlet-name>
+		<servlet-class>campsg.qunawan.proxy.DelegatingServletProxy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ordersAction</servlet-name>
+		<url-pattern>/myorder.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>updatePwdAction</servlet-name>
+		<servlet-class>campsg.qunawan.proxy.DelegatingServletProxy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updatePwdAction</servlet-name>
+		<url-pattern>/updatepwd.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>commentAction</servlet-name>
+		<servlet-class>campsg.qunawan.proxy.DelegatingServletProxy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>commentAction</servlet-name>
+		<url-pattern>/mycomment.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>commentPicAction</servlet-name>
+		<servlet-class>campsg.qunawan.proxy.DelegatingServletProxy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>commentPicAction</servlet-name>
+		<url-pattern>/mycommentPic.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>contactAction</servlet-name>
+		<servlet-class>campsg.qunawan.proxy.DelegatingServletProxy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>contactAction</servlet-name>
+		<url-pattern>/mycontact.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>cropAction</servlet-name>
+		<servlet-class>campsg.qunawan.proxy.DelegatingServletProxy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cropAction</servlet-name>
+		<url-pattern>/CropAction.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>indexAction</servlet-name>
+		<servlet-class>campsg.qunawan.proxy.DelegatingServletProxy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>indexAction</servlet-name>
+		<url-pattern>/index.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>searchAction</servlet-name>
+		<servlet-class>campsg.qunawan.proxy.DelegatingServletProxy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>searchAction</servlet-name>
+		<url-pattern>/search.jhtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>tripDetailAction</servlet-name>
+		<servlet-class>campsg.qunawan.proxy.DelegatingServletProxy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tripDetailAction</servlet-name>
+		<url-pattern>/tripDetail.jhtml</url-pattern>
+	</servlet-mapping>
+
+
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://www.oraclecsg.com/tlt</taglib-uri>
+			<taglib-location>/WEB-INF/tld/order_info_tag.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+</web-app>

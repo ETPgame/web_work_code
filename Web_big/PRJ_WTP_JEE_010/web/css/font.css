@@ -1,0 +1,35 @@
+/* 场景 PRJ-WTP-WEB-011：旅游产品字体样式 - 定义字体样式 【1/2 start】 */
+
+/* 价格栏字体样式 */
+.priceBox span{
+    font-family: "SimSun";
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 价格数字样式 */
+.priceBox span b{
+    font-size: 24px;
+	font-style:italic;
+}
+
+/* 好评率字体样式 */
+.good_comment span{
+    font-size: 14px;
+}
+
+/* 标题字体样式 */
+.detail .detail_title{
+    font-weight: bold;
+    font-size: 16px;
+}
+.detail .detail_title .title_left{
+    font-weight: normal;
+}
+
+/* 主题字体样式 */
+.detail .detail_text{
+	font-size:14px;
+}
+
+/* 场景 PRJ-WTP-WEB-011：旅游产品字体样式 - 定义字体样式 【1/2 end】 */

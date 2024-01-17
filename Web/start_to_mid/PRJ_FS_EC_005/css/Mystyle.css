@@ -1,0 +1,15 @@
+#sidebar .sidebar_list {
+  padding: 0 0 10px;
+  margin: 10px;
+  border: dotted;
+  border-color: #33CC00;
+  border-width: 5px 5px 5px 5px;
+  list-style-image: url(../images/category/fs_list.png);
+  list-style-position: inside;
+}
+
+#sidebar .sidebar_list li a {
+  padding-left: 18px;
+  color: #ffffff;
+  text-decoration: underline;
+}

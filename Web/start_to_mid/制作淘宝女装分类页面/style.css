@@ -1,0 +1,40 @@
+.a1  {
+  font-size: 18px;
+  font-weight: bold;
+  list-style-image: url("图片素材/dress01.png");
+}
+
+.a2  {
+  font-size: 18px;
+  font-weight: bold;
+  list-style-image: url("图片素材/dress02.png");
+}
+
+.a3  {
+  font-size: 18px;
+  font-weight: bold;
+  list-style-image: url("图片素材/dress03.png");
+}
+
+.a4  {
+  font-size: 18px;
+  font-weight: bold;
+  list-style-image: url("图片素材/dress04.png");
+}
+
+.a5  {
+  font-size: 18px;
+  font-weight: bold;
+  list-style-image: url("图片素材/dress05.png");
+}
+
+a {
+  font-size: 12px;
+  text-decoration: unset;
+  color: black;
+}
+
+a:hover {
+  color: #f60;
+  text-decoration: underline;
+}

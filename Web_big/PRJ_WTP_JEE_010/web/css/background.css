@@ -1,0 +1,79 @@
+/* 场景 PRJ-WTP-WEB-012：旅游产品样式图 【1/2 start】 */
+
+/* 产品框背景 */
+.main_l .recommend {
+    background-color: #fff;
+}
+
+/* 产品类型标签 */
+.main_l .recommend .detail_tag {
+    color: #fff;
+	line-height: 16px;
+}
+.main_l .recommend .detail_tag_blue{
+	background-color: #8BE;
+}
+.main_l .recommend .detail_tag_green{
+    background-color: #6C3;
+}
+.main_l .recommend .detail_tag_yellow{
+    background-color: #FA0;
+}
+
+/* 价格框 */
+.main_l .recommend .price .priceBox{
+    color: #999;
+}
+.priceBox span{
+    color: #f60;
+}
+.main_l .recommend .good_comment{
+    color: #999;
+}
+
+/* 产品标题 */
+.detail .detail_title .title_left{
+    color: #666;
+}
+.detail .detail_title a{
+    color: #333;
+}
+
+/* 产品主题 */
+.detail .detail_text dt{
+    color: #999;
+	word-spacing:25px;
+}
+
+/* 底部其他描述信息 */
+.discribe li{
+    background-color: #F5F5F5;
+}
+.discribe li p{
+    color: #666;
+}
+.discribe .icon{
+    background: url("../img/main_ico4.png") no-repeat;
+}
+.discribe .icon_stay{
+    background-position: -19px 0px;
+}
+.discribe .icon_place{
+    background-position: -102px 0px;
+}
+.discribe .icon_date{
+    background-position: -60px 0px;
+}
+.discribe .icon_time{
+    background-position: -40px 0px;
+}
+.discribe a.more{
+    color: #09c;
+}
+
+/* 首个产品的推荐标记 */
+.main_l .recommend .tip{
+    background: url("../img/main_ico5.png") no-repeat;
+}
+
+/* 场景 PRJ-WTP-WEB-012：旅游产品样式图 【1/2 end】 */

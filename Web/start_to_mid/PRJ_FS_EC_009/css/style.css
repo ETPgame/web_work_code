@@ -1,0 +1,406 @@
+﻿/**********************************************PRJ-FS-SE-001*********************************************/
+/*定义Body的整体样式*/
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #395015;
+    line-height: 20px;
+    background: url(../images/framepic/fs_main.png) repeat;
+}
+
+/*定义包含整个页面容器的样式*/
+#fs_wrapper{
+    width: 100%;
+    background: url(../images/framepic/fs_headerrepeat.jpg) repeat-x top center;
+}
+
+/*定义包含整个头部容器的样式*/
+#fs_header_wrapper{
+    width: 100%;
+    background: url(../images/framepic/fs_header.jpg) no-repeat top center;
+}
+
+/*定义居中头部容器的样式*/
+#fs_header{
+    margin: 0 auto;
+    position: relative;
+    width: 980px;
+    height: 620px;
+}
+
+/*定义包含整个主体容器的样式*/
+#fs_main_wrapper{
+    width: 100%;
+    background: url(../images/framepic/fs_footer.png) repeat-x bottom;
+}
+
+/*定义居中主体容器的样式*/
+#fs_main{
+    padding: 0 0 30px 0;
+    margin: 0 auto;
+    width: 980px;
+}
+
+/*定义包含整个尾部容器的样式*/
+#fs_footer_wrapper{
+    width: 100%;
+    background: #262921;
+}
+
+/*定义居中尾部容器的样式*/
+#fs_footer{
+    padding: 30px 0;
+    margin: 0 auto;
+    width: 980px;
+}
+
+/*定义标题的整体样式，对其进行初始化的工作*/
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+/*初始化标题的样式*/
+h1{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+h4{
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+h5{
+    font-size: 14px;
+}
+
+h6{
+    font-size: 12px;
+}
+
+/*初始化图片元素的样式*/
+img{
+    border:none;
+}
+
+/*初始化段落的样式*/
+p{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/**********************************************PRJ-FS-SE-002*********************************************/
+/*定义居中头部里面存放花店LOGO容器的样式*/
+#site_title{
+    position: relative;
+    padding: 20px 0;
+}
+
+/*定义居中头部花店LOGO容器里面链接的样式，设置该链接为图片超链接*/
+#site_title a{
+    display: block;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 12px;
+    color: #acacac;
+    width: 280px;
+    height: 105px;
+    text-indent: -10000px;
+    background: url(../images/logo/fs_logo.png) no-repeat top left;
+}
+
+/**********************************************PRJ-FS-SE-003*********************************************/
+/*定义居中头部导航栏容器的样式*/
+#fs_menu{
+    /* *//*清除浮动元素*//*
+     clear: both;*/
+    padding:10px;
+    width: 960px;
+    height: 30px;
+    background: url(../images/nav/menu.png) no-repeat;
+}
+
+
+/*定义导航菜单的无序列表中具体的导航项的样式*/
+.menu table td a{
+  	margin-right: 0px;
+    color: #333333;
+    display: block;
+    line-height: 30px; 
+    text-decoration: none;
+    outline: none;
+	
+}
+
+/*定义伪类，设置当选中一个导航菜单项的时候的字体的样式、菜单项的背景图片*/
+.menu table td a.selected, .menu table td a:hover{
+    color: #ffffff;
+    background: url(../images/nav/menu_hover.png) no-repeat;
+}
+
+/*定义包含搜索框和搜索按钮的容器的样式*/
+#fs_search{
+    float: right;
+    width: 214px;
+    height: 30px;
+    background: url(../images/nav/search_bg.png);
+}
+
+/*定义包含搜索框和搜索按钮的容器的搜索框的样式*/
+#fs_search .txt_field{
+    float: left;
+    display: block;
+    width: 170px;
+    height: 20px;
+    padding: 5px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #333333;
+    font-variant: normal;
+    border: none;
+    background: none;
+}
+
+/*定义包含搜索框和搜索按钮的容器的搜索按钮的样式*/
+#fs_search .sub_btn{
+    float: right;
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 26px;
+    /*鼠标指针变成手状*/
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/**********************************************PRJ-FS-SE-004*********************************************/
+/*暂无，第四部分的模块是使用JQuery制作完成，因此没有外部自定义（自己编写）的CSS样式文件*/
+
+/**********************************************PRJ-FS-SE-005*********************************************/
+/*定义包含左侧分类分类条目、左侧周推荐容器的样式*/
+#sidebar{
+    width: 242px;
+    float: left;
+}
+
+/*定义分类条目容器的样式*/
+.sidebar_box{
+    position: relative;
+    margin-bottom: 36px;
+}
+
+/*定义分类条目容器里面的分类标题的样式*/
+.sidebar_box h3{
+    padding: 0 10px 0 10px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    width: 222px;
+    height: 44px;
+    line-height: 44px;
+    background: url(../images/category/fs_sbheader.png) no-repeat;
+}
+
+/*定义分类条目容器里面的分类主体的样式*/
+#sidebar .sidebar_box .content{
+    padding: 10px 10px 5px;
+    background: url(../images/category/fs_sbbg.png) repeat-y;
+}
+
+/*定义分类条目容器里面的无序列表的样式*/
+#sidebar .sidebar_list{
+    padding: 0 0 10px;
+    margin: 0;
+    list-style: none;
+}
+
+/*定义分类条目容器里面的列表项的样式*/
+#sidebar .sidebar_list li{
+    padding: 5px 0;
+    margin: 0;
+    display: block;
+}
+
+/*定义分类条目容器里面的具体分类（链接）的样式*/
+#sidebar .sidebar_list li a{
+    padding-left: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    background: url(../images/category/fs_list.png) no-repeat left center;
+}
+
+/*定义分类条目容器里面的链接的伪类*/
+#sidebar .sidebar_list li a:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*定义分类条目容器里面的底部图片*/
+.sidebar_box .bottom{
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 242px;
+    height: 5px;
+    background: url(../images/category/fs_sbbgb.png);
+}
+
+/**********************************************PRJ-FS-SE-006*********************************************/
+/*定义周推荐容器的样式*/
+.special{
+    text-align: center;
+}
+
+/*定义周推荐容器里面推荐花种的图片样式*/
+.special img{
+    margin-bottom: 15px;
+}
+
+/*定义周推荐容器里面花种别名（链接）的样式*/
+.special a{
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*定义周推荐容器里面的价格，该价格起到初始化价格样式的作用*/
+.price{
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/*定义周推荐容器里面打折之前的价格*/
+.normal_price{
+    color: #999999;
+    text-decoration: line-through;
+}
+
+/*定义周推荐容器里面打折之后的价格*/
+.special_price{
+    color: #fced11;
+}
+
+/*定义周推荐容器里面价格段落的样式*/
+p{
+    margin: 0 0 15px;
+    padding: 0;
+    color: #ffffff;
+}
+
+/**********************************************PRJ-FS-SE-007*********************************************/
+/*定义居中主体容器里面的右侧部分的容器的样式*/
+#content{
+    float: right;/*这个地方的浮动很重要*/
+    width: 700px;/*这个宽度和重要*/
+}
+
+/*定义居中主体容器里面的右侧部分的容器的标题的样式*/
+#content h2{
+    padding: 10px;
+    background: url(../images/titlebg/fs_h2.png) repeat;
+}
+
+/*定义花店介绍里面的加粗字体的样式*/
+#content strong{
+    color: #e79e05;
+}
+
+/**********************************************PRJ-FS-SE-008*********************************************/
+/*定义居中主体部分右侧容器里面花种展示容器的样式*/
+.product_box{
+    float: left;
+    width: 165px;
+    text-align: center;
+    margin: 0 10px 10px 0;
+    background: url(../images/titlebg/fs_h2.png) repeat;
+}
+
+/*定义居中主体部分右侧容器里面最右边第四个花种展示容器的样式*/
+.no_margin_right{
+    margin-right: 0;
+}
+
+/*定义花种展示容器里面花种缩略图的样式*/
+.product_box img{
+    margin-bottom: 5px;
+}
+
+/*定义花种展示容器里面标题的样式*/
+.product_box h3{
+    margin-bottom: 5px;
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/*定义花种展示容器里面的花种价格的样式*/
+.product_box .product_price{
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/*定义花种展示容器里面包含添加到购物车、详情的段落的样式*/
+.product_box .add_to_cart{
+    clear: both;
+    width: 165px;
+    height: 28px;
+    background: url(../images/cart/addtocart.png) no-repeat;
+}
+
+/*定义花种展示容器里面添加到购物车、详情的具体样式*/
+.product_box .add_to_cart a{
+    float: left;
+    display: block;
+    width: 82px;
+    line-height: 28px;
+    text-align: center;
+    color: #333333;
+}
+
+/**/
+.cleaner {
+    clear: both;
+    display: block;
+}
+
+/**********************************************PRJ-FS-SE-009*********************************************/
+/*定义居中支付平台的样式*/
+#fs_footer .footer_left{
+    float: left;
+    width: 240px;
+}
+
+/**********************************************PRJ-FS-SE-010*********************************************/
+/*定义版权等样式*/
+#fs_footer .footer_right{
+    float: right;
+    width: 700px;
+    text-align: right;
+}

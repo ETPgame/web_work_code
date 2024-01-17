@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <title>芳菲小镇</title>
+
+    <!--导入用于定义整个页面的外部样式文件-->
+    <link type="text/css" href="css/style.css" rel="stylesheet"/>
+
+    <!--导入外部样式文件用于照片墙-->
+    <link type="text/css" href="css/orman.css" media="screen" rel="stylesheet"/>
+    <link type="text/css" href="css/nivo-slider.css" media="screen" rel="stylesheet"/>
+
+    <!--导入外部JQuary脚本用于照片墙-->
+    <script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+
+    <!--导入外部JavaScript脚本用于实现照片墙-->
+    <script type="text/javascript" src="js/picwall.js"></script>
+
+
+</head>
+<body>
+<div id="fs_wrapper"><!--定义存放整个页面的容器,该容器占满整个浏览器的宽度，并且分配其ID编号fs_wrapper_h-->
+
+<!--定义存放页面头部的容器，该容器占满整个浏览器的宽度，并且分配其ID编号fs_header_wh-->
+<div id="fs_header_wrapper">
+    <!--定义居中头部的容器，该容器在整个页面头部容器中处于居中状态，并且分配其ID编号fs_header-->
+    <div id="fs_header">
+        <!--定义居中头部存放花店LOGO的容器，并且分配其ID编号为site_title-->
+        <div id="site_title">
+            <!--网站的LOGO的指向本页面-->
+            <a href="" title="芳菲小镇">这个是芳菲小镇的LOGO超链接</a>        </div>
+
+        <!--定义居中头部存放导航栏的容器，该导航栏中包含两部分，一部分是导航菜单，一部分是搜索框。并且分配其ID编号templatemo_menu 类属性为menu-->
+        <div id="fs_menu" class="menu">
+            <!--定义用于导航菜单的无序列表-->
+            <ul>
+                <!--首页项,默认选中状态-->
+                <li><a href="" class="selected">首页</a></li>
+                <!--关于项，关于Categories的具体信息-->
+                <li><a href="">关于</a></li>
+                <!--产品项-->
+                <li><a href="">产品</a></li>
+                <!--支付-->
+                <li><a href="">支付</a></li>
+                <!--联系我们-->
+                <li><a href="">联系我们</a></li>
+                <!--帮助-->
+                <li><a href="">帮助</a></li>
+            </ul>
+            <!--定义用于存放搜索的容器，该搜索中包括搜索框、搜索按钮，提交数据方式为post-->
+            <div id="fs_search">
+                <form id="form1" name="form1" action="" method="post">
+                    <!--文本框-->
+                    <input type="text" name="keyword" id="keyword" class="txt_field" title="keyword" width="170px"
+                           height="20px" placeholder="请输入关键字"/>
+                    <!--按钮-->
+                    <input type="submit" name="search" id="searchbutton" class="sub_btn" value="" alt="搜索" width="30px"
+                           height="30px" onClick="checkSaid()" />
+                </form>
+            </div>
+            <!--内联样式，禁止元素在导航和搜索栏这一栏的左边浮动-->
+            <!--<br style="clear: left">-->
+        </div>
+
+        <!--定义居中头部存放照片墙的容器，该照片墙是使用JQuary制作-->
+        <div class="slider-wrapper theme-orman">
+            <!--"WHATS HOT!"的LOGO图标，放在图片的左上角-->
+            <div class="ribbon"></div>
+            <!--照片容器-->
+            <div id="slider" class="nivoSlider">
+                <img src="images/portfolio/01.jpg" alt="花种1" title="花种1"/>
+                <img src="images/portfolio/02.jpg" alt="花种2" title="花种2"/>
+                <img src="images/portfolio/03.jpg" alt="花种3" title="花种3"/>
+                <img src="images/portfolio/04.jpg" alt="花种4" title="花种4"/>
+                <img src="images/portfolio/05.jpg" alt="花种5" title="花种5"/>            </div>
+        </div>
+    </div>
+</div>
+
+<!--定义存放页面主体的容器，该容器占满整个浏览器的宽度，并且分配其ID编号fs_main_wrapper-->
+<div id="fs_main_wrapper">
+    <!--定义居中主体的容器，该容器在整个主体容器中处于居中状态，并且分配其ID编号fs_main-->
+    <div id="fs_main">
+
+        <!--定义居中主体容器里面的左侧部分的容器，该容器包含左侧的花种分类、左侧的周推荐-->
+        <div id="sidebar">
+            <!--定义左侧容器里面分类条目的容器，该容器有三部分组成，分别是分类的标题、分类的主体、分类条目的底部图片-->
+            <div class="sidebar_box">
+                <!--定义分类条目的标题-->
+                <h3>分类</h3>
+                <!--定义分类条目的主体信息-->
+                <div class="content">
+                    <!--分类是一个无序列表-->
+                    <ul class="sidebar_list">
+                        <li><a href="">玫瑰</a></li>
+                        <li><a href="">红玫瑰</a></li>
+                        <li><a href="">白玫瑰</a></li>
+                        <li><a href="">香槟玫瑰</a></li>
+                        <li><a href="">蓝玫瑰</a></li>
+                        <li><a href="">康乃馨</a></li>
+                        <li><a href="">郁金香</a></li>
+                        <li><a href="">百合</a></li>
+                        <li><a href="">马蹄莲</a></li>
+                    </ul>
+                </div>
+                <!--定义分类条目底部的图片，为该图片申请一个位置-->
+                <span class="bottom"></span>            </div>
+            <!--定义左侧容器里面周推荐的容器，该容器也是由三部分组成，分别是周推荐的标题、周推荐的正文、周推荐的底部图片-->
+            <div class="sidebar_box">
+                <!--定义周推荐的标题-->
+                <h3>周推荐</h3>
+                <!--定义周推荐的正文信息-->
+                <div class="content special">
+                    <!--推荐花种的图片-->
+                    <img src="images/picweekly/referral.jpg" alt="flowers"/>
+                    <!--花种的信息-->
+                    <a href="">蓝色妖姬</a>
+                    <!--花种的价格-->
+                    <p>
+                        订购价:
+                        <!--打折之前的价格-->
+                        <span class="price normal_price">￥1845</span>&nbsp;&nbsp;
+                        <!--打折之后的价格-->
+                        <span class="price special_price">￥1126</span>                    </p>
+
+
+
+                    <!--
+                        请为倒计时完善js脚本，脚本为countdown.js
+                    -->
+                    <div id="times_container">
+                        距离活动结束还有：
+                        <span id="times_day"></span>天
+                        <span id="times_hour"></span>时
+                        <span id="times_minute"></span>分
+                        <span id="second"></span>秒                    </div>
+                </div>
+                <!--定义周推荐的底部的图片，为该图片申请一个位置-->
+                <span class="bottom"></span>            </div>
+        </div>
+
+        <!--定义居中主体容器里面的右侧部分的容器，该容器也是由右侧的标题、右侧的花店介绍、右侧的花种展示组成，该容器需要向右侧浮动-->
+        <div id="content">
+            <!--定义右侧标题-->
+            <h2>欢迎来到芳菲小镇</h2>
+            <!--定义花店的介绍-->
+            <P>
+                <strong>芳菲小镇</strong>，创办于2000年，历经五年的不断探索及员工们的不懈努力，现已发展成为一家较为专业完善的花艺机构。芳菲花艺主要致力于鲜花，仿真花作品的创作，铸造独特的艺术品牌，弘扬花艺文化事业，立志成为全国优秀花店，以百年老牌花店为奋斗目标，把花店打造成为全国最好的花店，是芳菲人共同的奋斗目标！芳菲将不断提出新的经营理念，以适应当前市场时尚化，个性化的要求，多年来，芳菲小镇与全国各大城市专业花店密切联系，追求时尚，新颖，别致，简约，等花艺设计理念，提供最时尚，最前言的花艺设计，全心全意为消费者传情达意，真情服务！<strong>让生活充满阳光，让空气弥漫花香！</strong>
+            </P>
+            <!--交易鲜花展示1-->
+            <div class="product_box">
+                <!--花种缩略图-->
+                <a href="">
+                    <img src="images/product/01.jpg" alt="flower1"/>
+                </a>
+                <!--花种别名-->
+                <h3>勿忘我</h3>
+                <!--花种价格-->
+                <p class="product_price">￥298</p>
+                <!--添加到购物车-->
+                <p class="add_to_cart">
+                    <a href="">详情</a>
+                    <a href="">添加到购物车</a>
+                </p>
+            </div>
+            <!--交易鲜花展示2-->
+            <div class="product_box">
+                <a href="">
+                    <img src="images/product/02.jpg" alt="floral2"/>
+                </a>
+                <h3>俩俩相依</h3>
+                <p class="product_price">￥698</p>
+                <p class="add_to_cart">
+                    <a href="">详情</a>
+                    <a href="">添加到购物车</a>
+                </p>
+            </div>
+            <!--交易鲜花展示3-->
+            <div class="product_box">
+                <a href="">
+                    <img src="images/product/03.jpg" alt="floral3"/>
+                </a>
+                <h3>梦幻情人</h3>
+                <p class="product_price">￥169</p>
+                <p class="add_to_cart">
+                    <a href="">详情</a>
+                    <a href="">添加到购物车</a>
+                </p>
+            </div>
+            <!--交易鲜花展示4-->
+            <div class="product_box no_margin_right">
+                <a href="">
+                    <img src="images/product/04.jpg" alt="floral4"/>
+                </a>
+                <h3>爱你百分百</h3>
+                <p class="product_price">￥659</p>
+                <p class="add_to_cart">
+                    <a href="">详情</a>
+                    <a href="">添加到购物车</a>
+                </p>
+            </div>
+            <!--交易鲜花展示5-->
+            <div class="product_box">
+                <a href="">
+                    <img src="images/product/05.jpg" alt="floral5"/>
+                </a>
+                <h3>天长地久</h3>
+                <p class="product_price">￥636</p>
+                <p class="add_to_cart">
+                    <a href="">详情</a>
+                    <a href="">添加到购物车</a>
+                </p>
+            </div>
+            <!--交易鲜花展示6-->
+            <div class="product_box">
+                <a href="">
+                    <img src="images/product/06.jpg" alt="floral6"/>
+                </a>
+                <h3>爱情万岁</h3>
+                <p class="product_price">￥658</p>
+                <p class="add_to_cart">
+                    <a href="">详情</a>
+                    <a href="">添加到购物车</a>
+                </p>
+            </div>
+            <!--交易鲜花展示7-->
+            <div class="product_box">
+                <a href="">
+                    <img src="images/product/07.jpg" alt="floral7"/>
+                </a>
+                <h3>爱到永久</h3>
+                <p class="product_price">￥6299</p>
+                <p class="add_to_cart">
+                    <a href="">详情</a>
+                    <a href="">添加到购物车</a>
+                </p>
+            </div>
+            <!--交易鲜花展示8-->
+            <div class="product_box no_margin_right">
+                <a href="">
+                    <img src="images/product/08.jpg" alt="floral8"/>
+                </a>
+                <h3>想你的365天</h3>
+                <p class="product_price">￥2699</p>
+                <p class="add_to_cart">
+                    <a href="">详情</a>
+                    <a href="">添加到购物车</a>
+                </p>
+            </div>
+
+        </div>
+
+        <!---->
+        <div class="cleaner"></div>
+
+    </div>
+</div>
+
+<!--定义存放页面尾部的容器，该容器占满整个浏览器的宽度，并且分配其ID编号fs_footer_wrapper-->
+<div id="fs_footer_wrapper">
+    <!--定义居中尾部的容器，该容器在整个尾部容器中处于居中状态，并且分配其ID编号fs_footer-->
+    <div id="fs_footer">
+        <!--定义支付平台-->
+        <div class="footer_left">
+            <a href=""><img src="images/platforms/paypal-straight.png" alt="Paypal"/></a>
+            <a href=""><img src="images/platforms/mastercard-straight.png" alt="Master"/></a>
+            <a href=""><img src="images/platforms/visa-straight.png" alt="Visa"/></a>
+        </div>
+        <!--定义版权等信息-->
+        <div class="footer_right">
+            <!--尾部的导航栏信息-->
+            <p>
+                <a href="">首页</a> |
+                <a href="">关于</a> |
+                <a href="">产品</a> |
+                <a href="">支付</a> |
+                <a href="">联系我们</a> |
+                <a href="">帮助</a> |
+                <!--法律条款-->
+                <a href="">法律声明</a>
+            </p>
+            <!--经营许可证-->
+            <p>
+                增值电信业务经营许可证：XB2-20110446
+            </p>
+            <!--热线电话-->
+            <p>
+                服务热线 400-400-4000 |
+                招商热线 400-400-4000
+            </p>
+            <!--版权信息-->
+            <p>
+                Copyright (c) 2015 <a href="">Company Name</a>
+            </p>
+        </div>
+        <!--这个地方的清除浮动很重要-->
+        <div class="cleaner"></div>
+    </div>
+</div>
+</div>
+
+<!--导入外部JavaScript脚本用于实现倒计时功能-->
+<script type="text/javascript" src="js/countdown.js"></script>
+</body>
+</html>

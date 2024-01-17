@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.header {
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f8f8f8; /* 使用实际的背景色值 */
+}
+
+th, td {
+    border: 1px solid grey; /* 使用实际的边框颜色值 */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #333; /* 使用实际的标题栏颜色值 */
+    color: white;
+}
+
+a, button {
+    color: blue; /* 使用实际的主色调值 */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover, button:hover {
+    text-decoration: underline;
+}

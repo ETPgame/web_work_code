@@ -1,0 +1,20 @@
+/*花店标题*/
+#introduction_head {
+  font-family: "微软雅黑", Arial, sans-serif;
+  font-size: 16px;
+  background-image: url(../images/titlebg/fs_h2.png);
+  background-repeat: repeat;
+  letter-spacing: 8px;
+}
+
+/*标签内容*/
+#introduction_p {
+  font-family: "微软雅黑", Arial, sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+/*标签首尾*/
+#introduction_strong {
+  color: #e79e05;
+}
